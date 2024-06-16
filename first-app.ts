@@ -84,3 +84,28 @@ function login(credentials: Credentials){
 }
 
 login(new AuthCredentials())
+
+
+// * How to create a MERGE type
+type Admin = {
+    permissions: string[]
+}
+
+type AppUser = {
+    userName: string;
+}
+
+type AppAdmin = Admin | AppUser; // This is the combination of those types (Admin | AppUser)
+let admin: AppAdmin;
+admin = {
+    permissions: ["login"],
+    userName: "Andres"
+}
+
+// interface way
+/* interface AppUser{
+    userName: StringOrNum
+}
+
+interface AppAdmin extends Admin, AppUser {} */
+
