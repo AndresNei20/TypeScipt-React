@@ -109,3 +109,8 @@ admin = {
 
 interface AppAdmin extends Admin, AppUser {} */
 
+
+// * Literal Types
+
+let role: 'admin' | 'user' | 'editor' //"admin", "user", "editor"
+
