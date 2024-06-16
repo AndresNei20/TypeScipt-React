@@ -59,3 +59,17 @@ function calculate(
 }
 
 calculate(2, 5, add)
+
+// * Another way to create custom types, interface type is essentially for create object types
+interface Credentials {
+    email: string;
+    password: string;
+}
+
+let creds: Credentials
+
+creds = {
+    email: "hi@gmail.com",
+    password: "abcd"
+}
+// * INTERFACE VS CUSTOM TYPE
