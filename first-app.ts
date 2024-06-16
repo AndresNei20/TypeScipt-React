@@ -8,17 +8,22 @@ let userAge = 19;
 
 let isValid = true;
 
-let userID: string | number = "abc1"
+//custom type
+type StringOrNum = string | number
+let userID: StringOrNum = "abc1"
 userID = 123
 
 // * Object type
 /* let user: object;  */
-let user: {
+
+//Custom type
+type User = {
     name: string;
     age: number;
-    isAdmin: boolean;
-    id: string | number;
+    isAdmin:boolean;
+    id: StringOrNum
 }
+let user: User
 
 //user = "Andres"
 
@@ -34,3 +39,23 @@ user = {
 let hobbies: string[]/* Array<string> */; // number[], boolean[]
 
 hobbies = ['Gym', 'coding', 'cooking']
+
+// * Functions
+
+function add(a: number, b:number) {
+    const result = a + b;
+    return result;
+}
+
+//Custom type
+type AddFn = (a: number, b: number) => number
+
+function calculate(
+    a: number, 
+    b: number, 
+    calcFn: AddFn
+){
+    calcFn(a, b)
+}
+
+calculate(2, 5, add)
