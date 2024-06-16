@@ -73,3 +73,14 @@ creds = {
     password: "abcd"
 }
 // * INTERFACE VS CUSTOM TYPE
+// ? U can always use custom types but you can usually use Interfaces cause it just for define Objects of Functions Types
+class AuthCredentials implements Credentials {
+    email: string;
+    password: string;
+}
+
+function login(credentials: Credentials){
+
+}
+
+login(new AuthCredentials())
