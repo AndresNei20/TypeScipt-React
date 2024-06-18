@@ -1,10 +1,12 @@
+interface CourseGoalProps {
+    title: string;
+    description: string;
+  }
+
 export const CourseGoal = ({
   title,
   description,
-}: {
-  title: string;
-  description: string;
-}) => {
+}:CourseGoalProps ) => {
   return (
     <article>
       <div>
