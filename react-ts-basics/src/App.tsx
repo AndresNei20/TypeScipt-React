@@ -7,8 +7,9 @@ function App() {
       <h1>Let's get started</h1>
       <CourseGoal
         title="hello"
-        description="hello i'm the description"
-      />
+        >
+        <p>hello i'm the description</p>
+      </CourseGoal>
     </>
   );
 }

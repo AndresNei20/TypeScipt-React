@@ -1,17 +1,23 @@
+import {  ReactNode } from "react";
+/* import { PropsWithChildren } from "react"; */
+
 interface CourseGoalProps {
     title: string;
-    description: string;
+    children: ReactNode;
   }
+
+/* type CourseGoalProps = PropsWithChildren<{ title: string } > */ 
+// * Theres other way to use an component that waits a children
 
 export const CourseGoal = ({
   title,
-  description,
+  children,
 }:CourseGoalProps ) => {
   return (
     <article>
       <div>
         <h2>{title}</h2>
-        <p>{description}</p>
+        {children}
       </div>
       <button>Delete</button>
     </article>
