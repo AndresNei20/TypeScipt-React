@@ -1,12 +1,12 @@
-import { type FC, ReactNode } from "react";
+import { ReactNode } from "react";
 /* import { PropsWithChildren } from "react"; */
 
 interface CourseGoalProps {
-    title: string;
-    children: ReactNode;
-  }
+  title: string;
+  children: ReactNode;
+}
 
-/* type CourseGoalProps = PropsWithChildren<{ title: string } > */ 
+/* type CourseGoalProps = PropsWithChildren<{ title: string } > */
 // * Theres other way to use an component that waits a children
 
 /* const CourseGoal: FC<CourseGoalProps> = ({ title, children }) => {
@@ -22,10 +22,7 @@ interface CourseGoalProps {
 }
 export default CourseGoal */ //This is OTHER way to use Prop types
 
-export const CourseGoal = ({
-  title,
-  children,
-}:CourseGoalProps ) => {
+export const CourseGoal = ({ title, children }: CourseGoalProps) => {
   return (
     <article>
       <div>
