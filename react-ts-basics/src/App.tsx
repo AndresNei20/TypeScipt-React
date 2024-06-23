@@ -3,8 +3,9 @@ import { CourseGoal } from "./components/CourseGoal/CourseGoal";
 import { Header } from "./components/Header/Header";
 import goalsImg from './assets/goalsImage.jpg'
 import { useState } from "react";
+import { CourseGoalList } from "./components/CourseGoalList/CourseGoalList";
 
-interface CourseGoal {
+export interface CourseGoal {
   title: string;
   description: string;
   id: number;
@@ -33,14 +34,7 @@ function App() {
         <h1> Your course goals</h1>
       </Header>
       <button onClick={handleAddGoal}>Add Goal</button>
-      {goals.map((goal) => (
-        <li key={goal.id}>
-          <CourseGoal
-            title={goal.title}>
-            <p>{goal.description}</p>
-          </CourseGoal>
-        </li>
-      ) )}
+      <CourseGoalList goals={goals}/>
     </>
   );
 }
